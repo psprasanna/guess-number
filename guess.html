@@ -4,11 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guess Number</title>
+  <style>
+    div
+    {
+      height: 30px;
+      width: 50px;
+      background-color: black;
+
+    }
+  </style>
 </head>
 <body>
   <input id = "input">
   <button id = "checkButton" onclick="check()">check</button>
   <p id = "result">Result</p>
+  <p id="score">score : 10</p>
+  <button id="change" onclick="changeColor()">change</button>
+  <div id="box"></div>
+  
+
+  
 
 
 
@@ -16,6 +31,8 @@
   <script>
     var randomNumber = Math.floor(Math.random()*10)+1
     var result = document.getElementById("result")
+    var dscore = document.getElementById("score")
+    var score = 10
     function check()
     {
       var input = Number(document.getElementById("input").value)
@@ -27,14 +44,30 @@
       if(input == randomNumber)
       {
         result.textContent = "Correct"
-        alert("You Won")
+        dscore.textContent = `score : ${score}`
+        //alert("You Won")
       }
       else if (input != randomNumber)
       {
         result.textContent = "Not Correct"
-        alert("You Lost")
+        score--
+        dscore.textContent = `score : ${score}`
+        //alert("You Lost")
+      }
+      let box = document.getElementById("box")
+      
+      for(let i=1;i<=input;i++)
+      {
+        box.textContent=box
+        console.log(box.textContent=box)
       }
     }
+    var box = document.getElementById("box")
+    function changeColor()
+    {
+      box.style.backgroundColor="red"
+    }
+    
   </script>
 </body>
 </html>
