@@ -23,11 +23,6 @@
   <div id="box"></div>
   
 
-  
-
-
-
-
   <script>
     var randomNumber = Math.floor(Math.random()*10)+1
     var result = document.getElementById("result")
@@ -54,12 +49,15 @@
         dscore.textContent = `score : ${score}`
         //alert("You Lost")
       }
-      let box = document.getElementById("box")
-      
+      var div = document.getElementById("box")
+      var listItem = document.createElement("div")
       for(let i=1;i<=input;i++)
       {
-        box.textContent=box
-        console.log(box.textContent=box)
+        
+        //listItem.attributes ="Hello"
+        //div.append(listItem)
+        // box.textContent=box
+        // console.log(box.textContent=box)
       }
     }
     var box = document.getElementById("box")
