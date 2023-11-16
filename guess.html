@@ -6,8 +6,8 @@
   <title>Guess Number</title>
 </head>
 <body>
-  <input id = "input" type="number">
-  <button id = "checkButton">check</button>
+  <input id = "input">
+  <button id = "checkButton" onclick="check()">check</button>
   <p id = "result">Result</p>
 
 
@@ -15,18 +15,24 @@
 
   <script>
     var randomNumber = Math.floor(Math.random()*10)+1
+    var result = document.getElementById("result")
     function check()
     {
       var input = Number(document.getElementById("input").value)
-      var result = document.getElementById("result").textContent
+      console.log(input)
+      console.log(randomNumber)
+      console.log(typeof(input))
+      console.log(typeof(randomNumber))
 
-      if(inputNumber == randomNumber)
+      if(input == randomNumber)
       {
         result.textContent = "Correct"
+        alert("You Won")
       }
-      else if (inputNumber != randomNumber)
+      else if (input != randomNumber)
       {
         result.textContent = "Not Correct"
+        alert("You Lost")
       }
     }
   </script>
