@@ -1,0 +1,102 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom practise</title>
+</head>
+<body>
+  <input id="input" type="text" onkeyup="copy()">
+  <button onclick="copy()">click</button>
+  <h1 id="result"></h1>
+
+  <script>
+    var input = document.getElementById("input")
+    var result = document.getElementById("result")
+    function copy()
+    {
+      result.textContent=input.value
+    }
+
+  </script>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic change</title>
+  <style>
+    .outer{
+      display: flex;
+      flex-direction: row;
+    }
+    .inner{
+      display: flex;
+      flex-direction: row ;
+    }
+  </style>
+</head>
+<body>
+  <button id="add" onclick="add()">Add</button>
+  <input id="input" type="text" >
+  <div class="outer" id="result"></div>
+  <div id="box"></div>
+
+  <script>
+    var div = document.getElementById("result")
+    
+    var box = document.getElementById("box")
+
+    function add(){
+      // var list = document.createElement("h1")
+      // list.textContent="hello"
+      // div.append(list)
+      var input = Number(document.getElementById("input").value)
+
+      for(let i=1;i<=input;i++)
+      {
+        var listbox = document.createElement("div")
+        listbox.style.backgroundColor="black"
+        listbox.style.width = "30px"
+        listbox.style.height = "40px"
+        listbox.style.margin = "2px 4px"
+        listbox.setAttribute("class","inner")
+        box.append(listbox)
+
+
+      }
+    }
+
+
+
+  </script>
+
+</body>
+</html> -->
+<!-- 
+<button id="button" style="background-color: black;" onclick="update()">Color</button>
+
+<script>
+  var button = document.getElementById("button")
+  function update()
+  {
+    button.style.backgroundColor="red"
+  }
+</script> -->
+<h1 id="h1">Name</h1>
+<button id="btn1" onclick="update(event)">karthi</button>
+<button id="btn2" onclick="update(event)">ajith</button>
+<button id="btn3" onclick="update(event)">ram</button>
+
+<script>
+  var h1 = document.getElementById("h1")
+  // var btn = document.getElementById("btn")
+  // var btn2 = document.getElementById("btn").textContent
+  // var btn3 = document.getElementById("btn").textContent
+
+  function update(event){
+    h1.textContent= event.target.textContent
+  }
+</script>
